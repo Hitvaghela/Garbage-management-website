@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fi {
+            text-align: left;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            padding: 13px;
+            width: 200px;
+            border-radius: 5px;
+            font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+            font-style: initial;
+            text-align: center;
+            box-shadow: 1px 8px#999;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+
+        }
+
+        form {
+            border: #4CAF50;
+            display: inline-block;
+            height: 550px;
+
+        }
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        .se{
+            display:inline-block;
+            
+        }
+        
+    </style>
+</head>
+<script>
+function w() {
+    window.location.assign('w.html');
+
+}
+function p(){
+    window.location.assign('p.html');
+}
+    function formValidation(value,k) {
+        var uid = document.form.userid;
+        var passid = document.form.pasid;
+        var number=document.form.number;
+        var uadd = document.form.address;
+        var uemail = document.form.email;
+        if (userid_validation(uid, 5, 12)) {
+            if (passid_validation(passid, 7, 12)) {
+                if(num(number,10)){
+                    if (alphanumeric(uadd)) {
+                            if (ValidateEmail(uemail)) {
+                            if(value==k){
+                                
+                                w();
+                            }
+                            else{
+                                p();
+                            }
+                            }
+                        }
+                    }
+                }
+            }
+        
+
+
+    } function userid_validation(uid, mx, my) {
+        var uid_len = uid.value.length;
+        if (uid_len == 0 || uid_len >= my || uid_len < mx) {
+            alert("User name should not be empty / length be between " + mx + " to " + my);
+            uid.focus();
+            return false;
+        }
+        return true;
+    }
+    function passid_validation(passid, mx, my) {
+        var passid_len = passid.value.length;
+        if (passid_len == 0 || passid_len >= my || passid_len < mx) {
+            alert("Password should not be empty / length be between " + mx + " to " + my);
+            passid.focus();
+            return false;
+        }
+        return true;
+    }
+    function num(number,l){
+        if(number.value.length==l){
+            return true;
+        }
+        else{
+            number.focus();
+            alert("Check  Mobile number")
+            alert(number.length);
+            return false;
+        }
+    }
+    function alphanumeric(uadd) {
+        var letters = /^[/,0-9a-zA-Z\s- ]+$/;
+        if (uadd.value.match(letters)) {
+            return true;
+        }
+        else {
+            alert('User address must have alphanumeric characters only');
+            uadd.focus();
+            return false;
+        }
+    }
+   
+
+    function ValidateEmail(uemail) {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (uemail.value.match(mailformat)) {
+
+            return true;
+        }
+        else {
+            alert("You have entered an invalid email address!");
+            uemail.focus();
+            return false;
+        }
+    } 
+</script>
+
+<body bgcolor="#99A3A4">
+    
+        <div class="m6" style="font-family:monospace ; font-size: 20px;word-spacing: 1px;" >
+           
+    <div class="se" >
+        
+      <form name="form"  action="." method="post" style="margin-left: 100px;">
+        <div>
+            <h1 style="text-align: center; color:rgb(164, 242, 9);margin-left: 100px;">We Recycle, For Tomorrow</h1>
+        </div>
+        <br><br><br><br>
+        <div>
+            
+            <label> Full Name : &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label>
+                <input type="text" placeholder="Name" name="userid" id="userid" style="border-radius: 6px;width: 200px; background-color:  rgb(187, 231, 99);" ></label>
+            <br>
+        </div>
+        <br>
+        <div>
+            <label>Enter Number : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label>
+                <input type="number" placeholder="Enter mobile number" name="number" id="number" style="border-radius: 6px;width: 200px; background-color: rgb(187, 231, 99);">
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>Enter a password : &nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label>
+                <input type="password" placeholder="Password" name="pasid" id="pasid" style="border-radius: 6px;width: 200px; background-color:  rgb(187, 231, 99);">
+            </label>
+
+        </div>
+        <br>
+        <div>
+            <label>Enter a Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label>
+                <input type="email" placeholder="Email id" name="email" style="border-radius: 6px; width: 200px; background-color:  rgb(187, 231, 99);"> </label>
+        </div>
+        <br>
+        <div>
+            <label>Enter a Address :</label><br><br>
+            <label>
+                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea rows="8" cols="30 " placeholder="Address" name="address" style="border-radius: 6px;border-color: black;border-width: 2px; background-color:  rgb(187, 231, 99);"></textarea>
+            </label>
+        </div>
+        
+        
+
+      </form>
+</div>
+<div class="se" style="margin-left: 300px;" >
+    <img src="smart.jpg" width="450px" height="600px" style="margin-top: 20px; margin-left: 1000x;">
+</div>
+    <br>
+    <br><br><br>
+<form style="margin-left: 550px;" target="_blank">
+    <button type="submit"class="button" onclick="formValidation(1,1)">Get Home Waste Service</button>
+    </form>
+    <form style=" margin-left: 40px;" target="_blank">
+    <button type="submit" class="button" onclick="formValidation(2,1)">Voucher System</button>
+</form>
+</div>
+</body>
+
+</html>

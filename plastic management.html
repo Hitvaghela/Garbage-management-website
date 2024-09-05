@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management Services</title>
+    <style>
+        /* General Styles */
+        .fi {
+            background-color: #007BFF;
+            color: white;
+            height: 400px;
+            padding-top: 50px;
+            font-weight: 200;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: flex; /* Add this to make children elements flex */
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+            box-sizing: inherit;
+        }
+        .new {
+            background-image: url("we.png");
+            width: 700px;
+            height: 120px;
+            background-repeat: no-repeat;
+
+        }
+        .se {
+            flex: 7; /* 70% */
+            padding-left: 20px; /* Adjust padding as needed */
+        }
+
+        .ti {
+            margin-top: -50px;
+            flex: 5; /* 30% */
+            text-align:inherit; /* Center the image */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Introduction Styles */
+        .introduction {
+            padding: 20px;
+        }
+
+        /* Voucher System Styles */
+        .voucher-system {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* Contact Section Styles */
+        .contact {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Voucher Styles */
+        .voucher {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: relative;
+            cursor: pointer;
+            width: 700px;
+            align-items:center;
+            margin-left: 500px;
+        }
+
+        /* Additional Info Styles */
+        .additional-info {
+            border-radius: 20px;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: none;
+            width: 250px;
+            top: 0;
+            left: 100%;
+            transform: translateX(10px);
+        }
+
+        .voucher:hover .additional-info {
+            display: block;
+        }
+        .same{
+            display: inline-block;
+        }
+    </style>
+</head> 
+<body>
+    <div class="new"></div><br><br>
+    <!-- Header -->
+    <div class="fi">
+        <div class="se">
+            <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: bold; font-size: 60px; text-align: left ; margin-left: 150px; margin-top: 50px;">Plastic Management Service</h1>
+            <p style="font-family: sans-serif; text-align: left; margin-left: 150px; font-size: 20px;">We are committed to managing waste in an eco-friendly manner. Our mission is to reduce landfill waste and promote recycling and composting.</p>
+        </div>
+        <div class="ti"><img src="PWM-NOTE.jpg" alt="Waste Management" style="max-width: 107%; height: 450px; margin-left: 40px;"></div>
+    </div><br><br><br>
+         <div>
+            <h1>OBTAINING A VOUCHER</h1>
+            <p>We're committed to eco-friendly waste management. You can earn vouchers by showing us your trash bill. It doesn't matter if you do it monthly or yearly. The weight of your recyclables determines your vouchers.</p>
+            <p>When you provide your plastic waste daily, we generate a trash bill for you. This bill not only records your daily contributions but also helps us identify the weight of your plastic waste. By keeping track of this weight, we determine your environmental impact and rewards in our voucher system.</p>
+        </div><br><br>
+        <!-- Voucher System -->
+        <div class="voucher-system">
+            <div class="same"><img src="a.png" height="400px" width="500px"></div>
+            
+            <div class="same" style="margin-top: -600px;">
+            <h2 style="margin-left: 500px;">Voucher System</h2>
+            <div class="voucher" >
+                <h3>Voucher 1</h3>
+                <p>If your plastic contribution is between 1 kg and 5 kg, you will receive Voucher 1, which can be redeemed for a discount on our services.</p>
+                <div class="additional-info">
+                    <p>Discount Details:</p>
+                    <p>- Get a 5% discount on your choice of product</p>
+                    <p>- Get Free Bus Pass for 1 month</p>
+                    <p>- 5 paper bag</p>
+                </div>
+            </div>
+            <div class="voucher">
+                <h3>Voucher 2</h3>
+                <p>If your plastic contribution is between 5 kg and 10 kg, you will receive Voucher 2, which can be redeemed for exclusive eco-friendly products.</p>
+                <div class="additional-info">
+                    <p>Product Options:</p>
+                    <p>- Get a 10% discount on your choice of product</p>
+                    <p>- Get Free Bus Pass for 3 month</p>
+                    <p>- Eco-friendly utensil sets</p>
+                    <p>- 10 Paper bag</p>
+                </div>
+            </div>
+        </div>
+            <!-- Add more vouchers as needed -->
+        </div>
+        <br><br><br><br>
+        <!-- Contact Section -->
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, please feel free to contact our support team.</p>
+            <p>Email: info@wastemanagement.com</p>
+            <p>Phone: +999 875 345</p>
+        </div>
+    </div>
+</body>
+</html>
