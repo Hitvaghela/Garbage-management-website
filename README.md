@@ -23,5 +23,6 @@ The Garbage Management Website is a web-based platform that helps local municipa
 - Register for garbage collection services.
 - Earn vouchers by participating in recycling and waste management programs.
 
-Contributing
+
+
 Contributions are welcome! Please open an issue or submit a pull request if you would like to contribute.
