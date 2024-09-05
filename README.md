@@ -17,11 +17,11 @@ The Garbage Management Website is a web-based platform that helps local municipa
    ```bash
    git clone https://github.com/Hitvaghela/Garbage-management-website.git
 
-Usage
-Visit http://localhost:3000 in your browser.
-Sign up as a user or admin.
-Register for garbage collection services.
-Earn vouchers by participating in recycling and waste management programs.
+## Usage
+- Visit http://localhost:3000 in your browser.
+- Sign up as a user or admin.
+- Register for garbage collection services.
+- Earn vouchers by participating in recycling and waste management programs.
 
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request if you would like to contribute.
